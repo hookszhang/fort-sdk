@@ -1,18 +1,38 @@
 ## Fort SDK
 
+Documents https://boyuanitsm.github.io/fort/api/
+
 ### Import from
 
-使用之前务必配置[Boyuan Maven Repository](https://boyuanitsm.github.io/2017/02/07/maven-repository.html)
+> https://jitpack.io/#hookszhang/fort-sdk
 
 #### Maven
 ```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+	
 <dependency>
-    <groupId>com.boyuanitsm</groupId>
+    <groupId>com.github.hookszhang</groupId>
     <artifactId>fort-sdk</artifactId>
-    <version>1.6.1</version>
+    <version>v1.6.1</version>
 </dependency>
 ```
 #### Gradle
 ```
-compile "com.boyuanitsm:fort-sdk:1.6.1"
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+```
+dependencies {
+        compile 'com.github.hookszhang:fort-sdk:v1.6.1'
+}
 ```
